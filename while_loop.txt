@@ -1,0 +1,59 @@
+# Demonstrating while looping
+it = {'pen': 1, 'book': 2, 'bag': 3, 'ruler': 4}
+while it:
+    print(it.popitem())
+print('Done.')
+print("This is the end of first part\n")
+
+
+# Domonstrating while looping: The body of while loop
+# never execute because the length of item is only up to 4
+# not greater.
+
+print("\nThis is second part")
+it = {'pen': 1, 'book': 2, 'bag': 3, 'ruler': 4}
+while len(it) > 4:
+    print(it.popitem())
+print('Done.')
+
+
+# Demonstrating while looping: 
+print("\nThis is another section")
+cake = ['water', 'flower', 'sugar', 'oil', 'salt']
+while cake:
+      print(cake.pop())
+print('Done.')
+
+
+#while looping: when the loop contains fewer than two items,
+#the break statement on line 4 is reached, and the loop is terminated.
+#Execution then proceeds to the print() statement following the loop, on line 6.
+
+print("\nThis is another section")
+cake = ['water', 'flower', 'sugar', 'oil', 'salt']
+while cake:
+      if len(cake) < 2:
+          break
+      print(cake.pop())
+print('Done.')
+
+
+#The else clause of a while loop is executed if the loop terminates
+#“by exaustion”, meaning it iterates until the condition becomes false.
+
+print ("\nBegin again\n")
+cake = ['water', 'flower', 'sugar', 'oil', 'salt']
+while cake:
+      print(cake.pop())
+else:
+      print('Done.')
+
+
+#It prints same as above but the loop is unterminated.
+print("\nThis is another section")
+cake = ['water', 'flower', 'sugar', 'oil', 'salt']
+while cake:
+      if len(cake) < 2:
+          continue
+      print(cake.pop())
+print('Done.')
